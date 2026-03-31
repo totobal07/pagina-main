@@ -1,0 +1,144 @@
+/* Definición de variables de colores accesibles (Nivel AA) */
+:root {
+    /* Fondo principal: oscuro profundo */
+    --bg: #0f172a;
+
+    /* Texto principal: blanco puro/grisáceo (Ratio esperado contra --bg: ~15.9:1) */
+    --text: #f8fafc;
+
+    /* Color primario: verde neón clásico (Ratio esperado contra --bg: ~9.2:1) */
+    --primary: #4ade80;
+
+    /* Contraste del primario: verde muy oscuro (Ratio esperado contra --primary: ~10.4:1) */
+    --primary-contrast: #022c22;
+    /* Tamaño por defecto para imágenes de producto (puedes cambiar con el control) */
+    --product-size: 800px;
+}
+
+/* Aplicación de colores al cuerpo de la página */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+/* Site brand (logo + title) */
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.site-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+}
+@media (max-width: 600px) {
+    .site-logo {
+        width: 40px;
+        height: 40px;
+    }
+    .site-brand h1 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Estilo para los enlaces (<a>) */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contenedor de catálogo y tarjetas de producto */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.product-card {
+    border: 2px solid var(--primary);
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--product-size, 300px);
+    background: rgba(255,255,255,0.02);
+}
+
+.product-info {
+    padding-top: 8px;
+}
+
+/* Botones de compra */
+button {
+    background-color: var(--primary);
+    color: var(--primary-contrast);
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Enlace para saltar al contenido (accesible cuando se enfoca) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:active {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: var(--primary);
+    color: var(--primary-contrast);
+    z-index: 1000;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Estilos de enfoque visibles y no dependientes únicamente del color */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+    text-decoration: underline;
+}
+
+/* Asegurar que hover también muestre un indicador no basado solo en color */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Imágenes de producto: adaptan su tamaño al contenedor (.product-card) y mantienen proporción 1:1 */
+.product-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ajustes responsivos: en pantallas pequeñas las tarjetas ocupan todo el ancho */
+@media (max-width: 600px) {
+    .catalog {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .product-card {
+        max-width: 100%;
+    }
+}
