@@ -20,7 +20,7 @@
                 <span class="nav-sep">|</span>
                 <a href="#catalog">Catálogo</a>
                 <span class="nav-sep">|</span>
-                <a href="#footer">Contacto</a>
+                <a href="#formularios">Contacto y Registro</a>
             </div>
         </nav>
     </header>
@@ -68,6 +68,7 @@
             </div>
         </section>
 
+        <!-- NOVEDADES -->
         <section id="novedades" style="margin-bottom: 40px;">
             <h2 class="text-bg">🔥 Novedades</h2>
             <div class="catalog">
@@ -96,6 +97,7 @@
             </div>
         </section>
 
+        <!-- CATÁLOGO ORIGINAL COMPLETO -->
         <section id="catalog">
             <h2 class="text-bg">Nuestro Catálogo</h2>
 
@@ -412,7 +414,7 @@
                     </div>
 
                     <div class="product-card" id="prod-puma">
-                        <img src="images/puma_rs.jpg" alt="Puma RS" class="product-image">
+                        <img src="images/111.jpg" alt="Puma RS" class="product-image">
                         <div class="product-info">
                             <h3>Puma RS</h3>
                             <ul>
@@ -435,7 +437,7 @@
                     </div>
 
                     <div class="product-card" id="prod-converse">
-                        <img src="images/converse_allstar.jpg" alt="Converse All Star" class="product-image">
+                        <img src="images/gucci flashtrek.jpg" alt="Converse All Star" class="product-image">
                         <div class="product-info">
                             <h3>Converse All Star</h3>
                             <ul>
@@ -458,10 +460,10 @@
                     </div>
                 </div>
             </div>
-
         </section>
-    </main>
-<section class="lookbook-section">
+
+        <!-- CARRUSEL INTERACTIVO -->
+        <section class="lookbook-section" id="carrusel-container">
             <div class="lookbook-slider">
                 <div class="slide active">
                     <img src="images/lookbook1.jpg" alt="Lookbook Streetwear 1">
@@ -476,8 +478,89 @@
                     <div class="slide-text">Estilo sin límites</div>
                 </div>
             </div>
+            <div class="carousel-controls">
+                <button id="btn-prev" onclick="cambiarImagen(-1)">Anterior</button>
+                <button id="btn-next" onclick="cambiarImagen(1)">Siguiente</button>
+            </div>
         </section>
 
+        <!-- FORMULARIOS -->
+        <section id="formularios" style="max-width: 900px; margin: 40px auto; display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 20px;">
+            
+            <div class="form-container text-bg">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="text" id="login-email" placeholder="tu@email.com">
+                        <span class="error-msg" id="error-login-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-pass">Contraseña:</label>
+                        <input type="password" id="login-pass" placeholder="••••••••">
+                        <span class="error-msg" id="error-login-pass"></span>
+                    </div>
+                    <button type="submit" class="btn primary btn-block">Ingresar</button>
+                    <div id="login-success" class="success-msg"></div>
+                </form>
+            </div>
+
+            <div class="form-container text-bg">
+                <h2>Registro</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-user">Usuario:</label>
+                        <input type="text" id="reg-user" placeholder="Tu nombre de usuario">
+                        <span class="error-msg" id="error-reg-user"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email:</label>
+                        <input type="text" id="reg-email" placeholder="tu@email.com">
+                        <span class="error-msg" id="error-reg-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-pass">Contraseña:</label>
+                        <input type="password" id="reg-pass" placeholder="Mínimo 8 caracteres">
+                        <span class="error-msg" id="error-reg-pass"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-pass-confirm">Confirmar Contraseña:</label>
+                        <input type="password" id="reg-pass-confirm" placeholder="Repite tu contraseña">
+                        <span class="error-msg" id="error-reg-pass-confirm"></span>
+                    </div>
+                    <button type="submit" class="btn primary btn-block">Registrarse</button>
+                    <div id="reg-success" class="success-msg"></div>
+                </form>
+            </div>
+
+            <div class="form-container text-bg">
+                <h2>Contacto</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Nombre:</label>
+                        <input type="text" id="contact-name" placeholder="Tu nombre">
+                        <span class="error-msg" id="error-contact-name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="text" id="contact-email" placeholder="tu@email.com">
+                        <span class="error-msg" id="error-contact-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-msg">Mensaje:</label>
+                        <textarea id="contact-msg" rows="4" maxlength="300" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <span class="error-msg" id="error-contact-msg"></span>
+                            <span id="char-counter" class="char-counter">0 / 300</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn primary btn-block">Enviar Mensaje</button>
+                    <div id="contact-success" class="success-msg"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <footer id="footer" style="display: flex; justify-content: center; padding: 20px 0;">
         <p class="text-bg">Marca registrada totobal.Inc :V .</p>
@@ -486,7 +569,6 @@
     <div id="toast-container" class="toast-container"></div>
 
     <script src="js/cart.js"></script>
-
-
+    <script src="js/validaciones.js"></script>
 </body>
 </html>

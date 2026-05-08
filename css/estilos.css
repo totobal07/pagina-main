@@ -443,3 +443,84 @@ a { color: var(--primary); text-decoration: none; font-weight: bold; }
     .lookbook-section { height: 220px; }
     .slide-text { font-size: 1.2rem; margin-bottom: 20px; }
 }
+
+/* --- Formularios Integrados --- */
+.form-container {
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.form-group input, 
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.05rem;
+    padding: 12px;
+}
+
+/* Mensajes de feedback dinámicos */
+.error-msg {
+    color: #ef4444; /* Rojo suave */
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 16px; /* Evita que el layout salte cuando aparece texto */
+    display: block;
+}
+
+.success-msg {
+    color: var(--primary);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16px;
+    min-height: 20px;
+}
+
+.char-counter {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 4px;
+    white-space: nowrap;
+}
