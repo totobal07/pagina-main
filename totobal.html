@@ -61,6 +61,28 @@
             <p class="text-bg">Encuentra las mejores prendas para armar tu estilo.</p>
         </section>
 
+        <!-- CARRUSEL INTERACTIVO (MOVIDO A LA PARTE SUPERIOR) -->
+        <section class="lookbook-section" id="carrusel-container">
+            <div class="lookbook-slider">
+                <div class="slide active">
+                    <img src="images/unnamed.jpg" alt="Lookbook Streetwear 1">
+                    <div class="slide-text">Nuevas siluetas Y2K</div>
+                </div>
+                <div class="slide">
+                    <img src="images/gucci flashtrek.jpg" alt="Lookbook Streetwear 2">
+                    <div class="slide-text">Cortes Oversized</div>
+                </div>
+                <div class="slide">
+                    <img src="images/Gemini_Generated_Image_ymvx1symvx1symvx.png" alt="Lookbook Streetwear 3">
+                    <div class="slide-text">Estilo sin límites</div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button id="btn-prev" onclick="cambiarImagen(-1)">Anterior</button>
+                <button id="btn-next" onclick="cambiarImagen(1)">Siguiente</button>
+            </div>
+        </section>
+
         <section class="search-section">
             <div class="search-box">
                 <span aria-hidden="true">🔍</span>
@@ -97,7 +119,7 @@
             </div>
         </section>
 
-        <!-- CATÁLOGO ORIGINAL COMPLETO -->
+        <!-- CATÁLOGO -->
         <section id="catalog">
             <h2 class="text-bg">Nuestro Catálogo</h2>
 
@@ -414,11 +436,11 @@
                     </div>
 
                     <div class="product-card" id="prod-puma">
-                        <img src="images/111.jpg" alt="Puma RS" class="product-image">
+                        <img src="images/puma_rs.jpg" alt="Puma RS" class="product-image">
                         <div class="product-info">
                             <h3>Puma RS</h3>
                             <ul>
-                                <li>Color: Gris</li> 
+                                <li>Color: Gris</li>
                                 <li>
                                     <label>Talla:</label>
                                     <select class="size-select">
@@ -437,7 +459,7 @@
                     </div>
 
                     <div class="product-card" id="prod-converse">
-                        <img src="images/gucci flashtrek.jpg" alt="Converse All Star" class="product-image">
+                        <img src="images/converse_allstar.jpg" alt="Converse All Star" class="product-image">
                         <div class="product-info">
                             <h3>Converse All Star</h3>
                             <ul>
@@ -459,28 +481,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- CARRUSEL INTERACTIVO -->
-        <section class="lookbook-section" id="carrusel-container">
-            <div class="lookbook-slider">
-                <div class="slide active">
-                    <img src="images/lookbook1.jpg" alt="Lookbook Streetwear 1">
-                    <div class="slide-text">Nuevas siluetas Y2K</div>
-                </div>
-                <div class="slide">
-                    <img src="images/lookbook2.jpg" alt="Lookbook Streetwear 2">
-                    <div class="slide-text">Cortes Oversized</div>
-                </div>
-                <div class="slide">
-                    <img src="images/lookbook3.jpg" alt="Lookbook Streetwear 3">
-                    <div class="slide-text">Estilo sin límites</div>
-                </div>
-            </div>
-            <div class="carousel-controls">
-                <button id="btn-prev" onclick="cambiarImagen(-1)">Anterior</button>
-                <button id="btn-next" onclick="cambiarImagen(1)">Siguiente</button>
             </div>
         </section>
 
@@ -563,7 +563,7 @@
     </main>
 
     <footer id="footer" style="display: flex; justify-content: center; padding: 20px 0;">
-        <p class="text-bg">Marca registrada totobal.Inc .</p>
+        <p class="text-bg">Marca registrada totobal.Inc :V .</p>
     </footer>
 
     <div id="toast-container" class="toast-container"></div>
