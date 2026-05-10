@@ -524,3 +524,49 @@ a { color: var(--primary); text-decoration: none; font-weight: bold; }
     margin-top: 4px;
     white-space: nowrap;
 }
+
+.auth-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    padding: 15px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0.8;
+}
+
+.tab-btn.active {
+    opacity: 1;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeInTab 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

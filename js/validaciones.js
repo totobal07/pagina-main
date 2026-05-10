@@ -148,3 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('char-counter').textContent = `${currentLength} / 300`;
     });
 });
+
+window.cambiarPestaña = function(evento, nombrePestaña) {
+    // 1. Ocultar todos los contenidos de las pestañas
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // 2. Quitar la clase "active" de todos los botones
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // 3. Mostrar el contenido de la pestaña seleccionada
+    document.getElementById('tab-' + nombrePestaña).classList.add('active');
+    
+    // 4. Marcar el botón clickeado como activo
+    evento.currentTarget.classList.add('active');
+};
